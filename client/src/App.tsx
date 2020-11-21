@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import Home from './Pages/Home';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import SecureRoute from './Components/SecureRoute';
 import './App.css';
 
 function App() {
+
+	// Temp login
+	const tempLogin = () => <h1>Please login!</h1>
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* Navbar component here! */}
+	  {/* TODO: Create navbar component1 */}
+
+      <Switch>
+		  {/* TODO: Create login component: */}
+        <Route exact path="/login" component={tempLogin}/>
+
+		<SecureRoute isAuth={false} path='/' redirectPath='/login' component={Home}/>
+      </Switch>
+    </Router>
   );
 }
 
