@@ -1,19 +1,18 @@
-import React from 'react'
-import {Route, Redirect} from 'react-router-dom';
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
 
 interface SecureRouteData {
-    isAuth: Boolean,
-    path: string,
-    redirectPath: string
-    component: React.ComponentClass | React.FunctionComponent,
+  isAuth: Boolean;
+  exact: Boolean;
+  path: string;
+  component: React.ComponentClass | React.FunctionComponent;
 }
 
 export default function SecureRoute(props: SecureRouteData) {
-    return (
-        <>
-            {props.isAuth 
-              ? <Route exact path={props.path} component={props.component}/> 
-              : <Redirect to={props.redirectPath} />}
-        </>
-    )
+  // prettier-ignore
+  const route = props.exact 
+			? <Route exact path={props.path} component={props.component} />
+			: <Route path={props.path} component={props.component} />;
+
+  return <>{props.isAuth ? { route } : <Redirect to="login" />}</>;
 }

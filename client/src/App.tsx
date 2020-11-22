@@ -1,24 +1,18 @@
-import React from 'react';
-import Home from './Pages/Home';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import SecureRoute from './Components/SecureRoute';
-import './App.css';
+import React from "react";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import SecureRoute from "./Components/SecureRoute";
 
 function App() {
-
-	// Temp login
-	const tempLogin = () => <h1>Please login!</h1>
-
   return (
     <Router>
-      {/* Navbar component here! */}
-	  {/* TODO: Create navbar component1 */}
-
       <Switch>
-		  {/* TODO: Create login component: */}
-        <Route exact path="/login" component={tempLogin}/>
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
 
-		<SecureRoute isAuth={false} path='/' redirectPath='/login' component={Home}/>
+        <SecureRoute isAuth={false} exact={true} path="/" component={Home} />
       </Switch>
     </Router>
   );
