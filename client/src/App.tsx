@@ -4,6 +4,7 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SecureRoute from "./Components/SecureRoute";
+import "./Sass/main.scss";
 
 function App() {
   return (
