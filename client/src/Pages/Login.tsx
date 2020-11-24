@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <div className="container--center">
+    <div className="container--middle">
       <form className="form">
         <h1 className="form__header">Please Login</h1>
 
