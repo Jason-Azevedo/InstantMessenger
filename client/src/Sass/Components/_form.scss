@@ -1,20 +1,42 @@
 .form {
-  max-width: 600px;
+  max-width: 350px;
+  width: 100%;
 
   &__header {
     color: $color-heading;
+    font-size: $font-lg;
+    margin: 0 0 1.2rem 0;
   }
 
   &__label {
     display: block;
     color: $color-label;
+    font-size: $font-sm;
+    letter-spacing: 0.025rem;
+    margin: 1rem 0 0.5rem 0;
   }
 
   &__input {
+    width: 100%;
     color: $color-font;
+    background: #fef6ff;
+    font-size: $font-md;
+    letter-spacing: 0.02rem;
+    padding: 0.75rem 0.75rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #333;
+
+    &:hover {
+      border-bottom: 1px solid $color-tertiary;
+    }
   }
 
   &__text {
     color: $color-font;
+    font-size: font-md;
+    letter-spacing: 0.02rem;
+    margin: 1.4rem 0 1rem 0;
   }
 }

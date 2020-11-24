@@ -1,4 +1,5 @@
 // @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import "reset";
 @import "vars";
 @import "utils";
 @import "font";
@@ -14,4 +15,9 @@ body {
 a {
   color: $color-tertiary;
   text-decoration: none;
+}
+
+a,
+input {
+  outline: none;
 }
