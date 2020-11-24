@@ -5,7 +5,13 @@
   &__header {
     color: $color-heading;
     font-size: $font-lg;
-    margin: 0 0 1.2rem 0;
+    margin: 0 0 1.6rem 0;
+  }
+
+  &__subheader {
+    color: $color-label;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
   }
 
   &__label {
@@ -26,9 +32,10 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #888;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-bottom: 1px solid $color-tertiary;
     }
   }
@@ -36,7 +43,7 @@
   &__text {
     color: $color-font;
     font-size: font-md;
-    letter-spacing: 0.02rem;
-    margin: 1.4rem 0 1rem 0;
+    letter-spacing: 0.025rem;
+    margin: 1rem 0 1.6rem 0;
   }
 }
