@@ -14,5 +14,5 @@ export default function SecureRoute(props: SecureRouteData) {
 			? <Route exact path={props.path} component={props.component} />
 			: <Route path={props.path} component={props.component} />;
 
-  return <>{props.isAuth ? { route } : <Redirect to="login" />}</>;
+  return <>{props.isAuth ? route : <Redirect to="login" />}</>;
 }

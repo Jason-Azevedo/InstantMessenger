@@ -13,7 +13,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
 
-        <SecureRoute isAuth={false} exact={true} path="/" component={Home} />
+        <SecureRoute isAuth={true} exact={true} path="/" component={Home} />
       </Switch>
     </Router>
   );

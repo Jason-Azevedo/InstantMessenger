@@ -23,7 +23,8 @@
   }
 
   &__input {
-    width: 100%;
+    max-width: 350px;
+    width: calc(100% - 1.5rem);
     color: $color-font;
     background: #fef6ff;
     font-size: $font-md;
