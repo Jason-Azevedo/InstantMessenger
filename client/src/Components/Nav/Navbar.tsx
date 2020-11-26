@@ -4,9 +4,9 @@ import Option from "./Option";
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="nav">
       {/* Settings and stuff */}
-      <h2>Options</h2>
+      <h2 className="nav__subheader">Options</h2>
       <ul>
         <li>
           <Option />
@@ -14,7 +14,7 @@ export default function Navbar() {
       </ul>
 
       {/* Chats */}
-      <h2>Chats</h2>
+      <h2 className="nav__subheader">Chats</h2>
       <ul>
         <li>
           <Chat />

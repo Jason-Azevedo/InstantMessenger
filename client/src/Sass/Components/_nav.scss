@@ -1,2 +1,41 @@
 .nav {
+  height: 100vh;
+  background: #9999995e;
+
+  &__subheader {
+  }
+}
+
+/* Mobile */
+@media screen and (min-width: 425px) {
+  .nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80vw;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40vw;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+  .nav {
+    width: 25vw;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+  .nav {
+    width: 15vw;
+  }
 }
