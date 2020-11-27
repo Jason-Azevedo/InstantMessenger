@@ -1,13 +1,17 @@
 .nav {
   height: 100vh;
-  background: #9999995e;
+  border-right: 1px solid #999;
+  box-shadow: 2px 0 2px 2px rgba(85, 85, 85, 0.1);
 
   &__subheader {
+    font-size: $font-xxmd;
+    color: $color-font;
+    margin: 1rem 1.2rem;
   }
 }
 
 /* Mobile */
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .nav {
     position: absolute;
     left: 0;
@@ -17,7 +21,7 @@
 }
 
 /* Tablet */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .nav {
     position: absolute;
     left: 0;
@@ -27,8 +31,9 @@
 }
 
 /* Laptop */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   .nav {
+    position: initial;
     width: 25vw;
   }
 }
@@ -36,6 +41,7 @@
 /* Desktop */
 @media screen and (min-width: 1440px) {
   .nav {
+    position: initial;
     width: 15vw;
   }
 }
